@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
@@ -95,10 +96,19 @@ public class janela extends JFrame {
 		lblNewLabel.setBounds(22, 11, 176, 70);
 		contentPane.add(lblNewLabel);
 		
-		tabelaUsuarios = new JTable();
-		tabelaUsuarios.setBounds(1065, 468, -323, -246);
-		contentPane.add(tabelaUsuarios);
+		// Adicionando o JTable
+		model = new DefaultTableModel();
+		tabelaUsuarios = new JTable(model);
 		
+		// Configurando as colunas do JTable
+		model.addColumn("Nome");
+		model.addColumn("Email");
+		model.addColumn("CPF");
+		model.addColumn("Telefone");
 		
+		// Adicionando o JTable em um JScrollPane
+		JScrollPane scrollPane = new JScrollPane(tabelaUsuarios);
+		scrollPane.setBounds(600, 100, 550, 500);
+		contentPane.add(scrollPane);
 	}
 }
