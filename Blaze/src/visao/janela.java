@@ -13,15 +13,23 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
+import controle.UsuarioDAO;
+import modelo.Usuario;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
 public class janela extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textNome;
-	private JTextField textEmail;
-	private JTextField textCpf;
-	private JTextField textTelefone;
+	private JTextField txtNome;
+	private JTextField txtEmail;
+	private JTextField txtCpf;
+	private JTextField txtTelefone;
 	private JTable tabelaUsuarios;
 	private DefaultTableModel model;
+	private Usuario user  = new Usuario();
+	private UsuarioDAO dao = new UsuarioDAO();
 
 	/**
 	 * Launch the application.
@@ -51,6 +59,8 @@ public class janela extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		dao = UsuarioDAO.getFUsuarioDAO();
+		
 		JLabel lblNome = new JLabel("Nome: ");
 		lblNome.setBounds(82, 224, 46, 14);
 		contentPane.add(lblNome);
@@ -67,27 +77,36 @@ public class janela extends JFrame {
 		lblTelefone.setBounds(82, 365, 77, 14);
 		contentPane.add(lblTelefone);
 		
-		textNome = new JTextField();
-		textNome.setBounds(138, 221, 412, 20);
-		contentPane.add(textNome);
-		textNome.setColumns(10);
+		txtNome = new JTextField();
+		txtNome.setBounds(138, 221, 412, 20);
+		contentPane.add(txtNome);
+		txtNome.setColumns(10);
 		
-		textEmail = new JTextField();
-		textEmail.setColumns(10);
-		textEmail.setBounds(138, 269, 412, 20);
-		contentPane.add(textEmail);
+		txtEmail = new JTextField();
+		txtEmail.setColumns(10);
+		txtEmail.setBounds(138, 269, 412, 20);
+		contentPane.add(txtEmail);
 		
-		textCpf = new JTextField();
-		textCpf.setColumns(10);
-		textCpf.setBounds(138, 320, 412, 20);
-		contentPane.add(textCpf);
+		txtCpf = new JTextField();
+		txtCpf.setColumns(10);
+		txtCpf.setBounds(138, 320, 412, 20);
+		contentPane.add(txtCpf);
 		
-		textTelefone = new JTextField();
-		textTelefone.setColumns(10);
-		textTelefone.setBounds(138, 362, 412, 20);
-		contentPane.add(textTelefone);
+		txtTelefone = new JTextField();
+		txtTelefone.setColumns(10);
+		txtTelefone.setBounds(138, 362, 412, 20);
+		contentPane.add(txtTelefone);
 		
 		JButton btnNewButton = new JButton("Cadastrar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				user.setNome(txtNome.getText());
+				user.setCpf(Long.valueOf((txtCpf.getText())));
+				user.setEmail(txtEmail.getText());
+				user.setNumero(Long.valueOf((txtTelefone.getText())));
+				dao.insert(user);
+			}
+		});
 		btnNewButton.setBounds(234, 461, 227, 23);
 		contentPane.add(btnNewButton);
 		
