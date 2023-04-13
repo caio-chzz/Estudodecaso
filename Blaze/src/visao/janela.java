@@ -17,7 +17,9 @@ import controle.UsuarioDAO;
 import modelo.Usuario;
 
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class janela extends JFrame {
 
@@ -54,6 +56,7 @@ public class janela extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1197, 726);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 128, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -97,18 +100,24 @@ public class janela extends JFrame {
 		txtTelefone.setBounds(138, 362, 412, 20);
 		contentPane.add(txtTelefone);
 		
-		JButton btnNewButton = new JButton("Cadastrar");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.setBackground(new Color(128, 255, 255));
+		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				user.setNome(txtNome.getText());
 				user.setCpf(Long.valueOf((txtCpf.getText())));
 				user.setEmail(txtEmail.getText());
 				user.setNumero(Long.valueOf((txtTelefone.getText())));
 				dao.insert(user);
+				
+				ArrayList<Usuario> Lista = new ArrayList<>();
+				Lista = dao.getList();
+				atualizarTabela(Lista);
+		
 			}
 		});
-		btnNewButton.setBounds(234, 461, 227, 23);
-		contentPane.add(btnNewButton);
+		btnCadastrar.setBounds(235, 436, 227, 23);
+		contentPane.add(btnCadastrar);
 		
 		JLabel lblNewLabel = new JLabel("Tela De Cadastro");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -130,4 +139,16 @@ public class janela extends JFrame {
 		scrollPane.setBounds(600, 100, 550, 500);
 		contentPane.add(scrollPane);
 	}
+	public void atualizarTabela(ArrayList<Usuario> TUser) {
+	    // Limpa o modelo da tabela
+	    model.setRowCount(0);
+	    
+	    // Adiciona as pessoas como novas linhas da tabela
+	    for (Usuario usuario : TUser) {
+	        Object[] linha = {usuario.getNome(), usuario.getEmail(), usuario.getCpf(), usuario.getNumero()};
+	        model.addRow(linha);
+		}
+	    
+	}
+
 }
