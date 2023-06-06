@@ -22,7 +22,7 @@ public class Viagens extends JFrame {
     private JPanel contentPane;
     private JList<String> estadosList;
     private DefaultListModel<String> listModel;
-
+    
     public static void main(String[] args) {
 
         try {
