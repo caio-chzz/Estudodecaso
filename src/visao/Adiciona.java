@@ -4,24 +4,28 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
+import javax.swing.text.MaskFormatter;
 
 public class Adiciona extends JFrame {
 
     private JPanel contentPane;
     private JTextField textField;
-    private JTextField textField_1;
+    private JTextField txtCPF;
     private JTextField textField_2;
     private JTextField textField_3;
     private JTextField textField_4;
     private JTextField textField_5;
+    private MaskFormatter mascaraCPF;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -86,12 +90,12 @@ public class Adiciona extends JFrame {
         contentPane.add(textField);
         textField.setColumns(10);
         
-        textField_1 = new JTextField();
-        textField_1.setForeground(Color.BLACK);
-        textField_1.setBackground(new Color(192, 192, 192));
-        textField_1.setColumns(10);
-        textField_1.setBounds(230, 293, 403, 30);
-        contentPane.add(textField_1);
+        txtCPF = new JTextField();
+        txtCPF.setForeground(Color.BLACK);
+        txtCPF.setBackground(new Color(192, 192, 192));
+        txtCPF.setColumns(10);
+        txtCPF.setBounds(230, 293, 403, 30);
+        contentPane.add(txtCPF);
         
         textField_2 = new JTextField();
         textField_2.setForeground(Color.BLACK);
@@ -113,11 +117,21 @@ public class Adiciona extends JFrame {
         lblNomeCompleto.setBounds(230, 154, 459, 46);
         contentPane.add(lblNomeCompleto);
         
-        JLabel lblPreco1_1_1 = new JLabel("CPF:");
-        lblPreco1_1_1.setForeground(Color.BLACK);
-        lblPreco1_1_1.setFont(new Font("Californian FB", Font.BOLD, 21));
-        lblPreco1_1_1.setBounds(226, 252, 459, 46);
-        contentPane.add(lblPreco1_1_1);
+        JLabel lblCPF = new JLabel("CPF:");
+        lblCPF.setForeground(Color.BLACK);
+        lblCPF.setFont(new Font("Californian FB", Font.BOLD, 21));
+        lblCPF.setBounds(226, 252, 459, 46);
+        contentPane.add(lblCPF);
+        
+        /*****************************/
+        mascaraCPF = null;
+        try {
+        	mascaraCPF = new MaskFormatter("###.###.###-##");
+        } catch(ParseException e) {
+        	e.printStackTrace();
+        }
+        txtCPF = new JFormattedTextField(mascaraCPF);
+        /*****************************/
         
         JLabel lblPreco1_1_1_1 = new JLabel("Quantidade           Peso da bagagem");
         lblPreco1_1_1_1.setForeground(Color.BLACK);
