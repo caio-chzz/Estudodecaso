@@ -128,9 +128,9 @@ public class Login extends JFrame {
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				Viagens viagens = new Viagens();
-				viagens.setExtendedState(JFrame.MAXIMIZED_BOTH); // Maximize a tela
-				viagens.setVisible(true);
+				ViagemHorarios viagemhorarios = new ViagemHorarios();
+				viagemhorarios.setExtendedState(JFrame.MAXIMIZED_BOTH); // Maximize a tela
+				viagemhorarios.setVisible(true);
 			}
 		});
 	}
