@@ -47,7 +47,7 @@ public class Final extends JFrame {
         JButton btnNewButton = new JButton("Sair do Sistema");
         btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
         btnNewButton.setForeground(Color.BLACK);
-        btnNewButton.setBackground(new Color(0, 0, 0));
+        btnNewButton.setBackground(Color.WHITE);
         btnNewButton.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		dispose();
@@ -67,7 +67,7 @@ public class Final extends JFrame {
         	}
         });
         btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        btnNewButton_1.setBackground(new Color(0, 0, 0));
+        btnNewButton_1.setBackground(new Color(255, 255, 255));
         btnNewButton_1.setBounds(412, 486, 431, 104);
         contentPane.add(btnNewButton_1);
         
@@ -76,11 +76,5 @@ public class Final extends JFrame {
         lblNewLabel.setIcon(new ImageIcon(Final.class.getResource("/imagens/sai.png")));
         lblNewLabel.setBounds(884, 139, 204, 179);
         contentPane.add(lblNewLabel);
-        
-        JLabel lblNewLabel_1 = new JLabel("New label");
-        lblNewLabel_1.setForeground(Color.BLACK);
-        lblNewLabel_1.setIcon(new ImageIcon(Final.class.getResource("/imagens/volya.png")));
-        lblNewLabel_1.setBounds(371, 413, 745, 213);
-        contentPane.add(lblNewLabel_1);
     }
 }
