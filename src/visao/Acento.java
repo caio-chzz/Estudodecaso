@@ -99,91 +99,91 @@ public class Acento extends JFrame {
         JButton btn1_1 = new JButton("1º");
         btn1_1.setForeground(Color.BLACK);
         btn1_1.setFont(new Font("Californian FB", Font.BOLD, 12));
-        btn1_1.setBackground(new Color(0, 0, 0));
+        btn1_1.setBackground(new Color(255, 64, 98));
         btn1_1.setBounds(504, 326, 43, 46);
         contentPane.add(btn1_1);
         
         JButton btn1_1_1_1 = new JButton("2º");
-        btn1_1_1_1.setForeground(new Color(255, 255, 255));
+        btn1_1_1_1.setForeground(Color.BLACK);
         btn1_1_1_1.setFont(new Font("Californian FB", Font.BOLD, 11));
         btn1_1_1_1.setBackground(new Color(0, 0, 0));
         btn1_1_1_1.setBounds(504, 387, 43, 46);
         contentPane.add(btn1_1_1_1);
         
         JButton btn1_1_1_2 = new JButton("3º");
-        btn1_1_1_2.setForeground(new Color(255, 255, 255));
+        btn1_1_1_2.setForeground(Color.BLACK);
         btn1_1_1_2.setFont(new Font("Californian FB", Font.BOLD, 11));
-        btn1_1_1_2.setBackground(new Color(0, 0, 0));
+        btn1_1_1_2.setBackground(new Color(255, 64, 98));
         btn1_1_1_2.setBounds(587, 326, 43, 46);
         contentPane.add(btn1_1_1_2);
         
         JButton btn1_1_1_3 = new JButton("4º");
-        btn1_1_1_3.setForeground(new Color(255, 255, 255));
+        btn1_1_1_3.setForeground(Color.BLACK);
         btn1_1_1_3.setFont(new Font("Californian FB", Font.BOLD, 9));
         btn1_1_1_3.setBackground(new Color(0, 0, 0));
         btn1_1_1_3.setBounds(587, 387, 43, 46);
         contentPane.add(btn1_1_1_3);
         
         JButton btn1_1_1_4 = new JButton("5º");
-        btn1_1_1_4.setForeground(new Color(255, 255, 255));
+        btn1_1_1_4.setForeground(Color.BLACK);
         btn1_1_1_4.setFont(new Font("Californian FB", Font.BOLD, 11));
         btn1_1_1_4.setBackground(new Color(0, 0, 0));
         btn1_1_1_4.setBounds(673, 326, 43, 46);
         contentPane.add(btn1_1_1_4);
         
         JButton btn1_1_1_5 = new JButton("6º");
-        btn1_1_1_5.setForeground(new Color(255, 255, 255));
+        btn1_1_1_5.setForeground(Color.BLACK);
         btn1_1_1_5.setFont(new Font("Californian FB", Font.BOLD, 9));
         btn1_1_1_5.setBackground(new Color(0, 0, 0));
         btn1_1_1_5.setBounds(673, 387, 43, 46);
         contentPane.add(btn1_1_1_5);
         
         JButton btn1_1_1_6 = new JButton("8º");
-        btn1_1_1_6.setForeground(new Color(255, 255, 255));
+        btn1_1_1_6.setForeground(Color.BLACK);
         btn1_1_1_6.setFont(new Font("Californian FB", Font.BOLD, 10));
         btn1_1_1_6.setBackground(new Color(0, 0, 0));
         btn1_1_1_6.setBounds(764, 387, 43, 46);
         contentPane.add(btn1_1_1_6);
         
         JButton btn1_1_1_9 = new JButton("7º");
-        btn1_1_1_9.setForeground(new Color(255, 255, 255));
+        btn1_1_1_9.setForeground(Color.BLACK);
         btn1_1_1_9.setFont(new Font("Californian FB", Font.BOLD, 10));
         btn1_1_1_9.setBackground(new Color(0, 0, 0));
         btn1_1_1_9.setBounds(764, 326, 43, 46);
         contentPane.add(btn1_1_1_9);
         
         JButton btn1_1_1_10 = new JButton("11º");
-        btn1_1_1_10.setForeground(new Color(255, 255, 255));
+        btn1_1_1_10.setForeground(Color.BLACK);
         btn1_1_1_10.setFont(new Font("Californian FB", Font.BOLD, 8));
         btn1_1_1_10.setBackground(new Color(0, 0, 0));
-        btn1_1_1_10.setBounds(941, 326, 43, 46);
+        btn1_1_1_10.setBounds(910, 326, 43, 46);
         contentPane.add(btn1_1_1_10);
         
         JButton btn1_1_1_11 = new JButton("12º");
         btn1_1_1_11.setForeground(new Color(255, 255, 255));
         btn1_1_1_11.setFont(new Font("Californian FB", Font.BOLD, 7));
         btn1_1_1_11.setBackground(new Color(0, 0, 0));
-        btn1_1_1_11.setBounds(941, 387, 43, 46);
+        btn1_1_1_11.setBounds(910, 387, 43, 46);
         contentPane.add(btn1_1_1_11);
         
         JButton btn1_1_1_12 = new JButton("9º");
-        btn1_1_1_12.setForeground(new Color(255, 255, 255));
+        btn1_1_1_12.setForeground(Color.BLACK);
         btn1_1_1_12.setFont(new Font("Californian FB", Font.BOLD, 10));
         btn1_1_1_12.setBackground(new Color(0, 0, 0));
-        btn1_1_1_12.setBounds(850, 326, 43, 46);
+        btn1_1_1_12.setBounds(828, 331, 43, 46);
         contentPane.add(btn1_1_1_12);
         
         JButton btn1_1_1_13 = new JButton("10º");
         btn1_1_1_13.setForeground(Color.BLACK);
         btn1_1_1_13.setFont(new Font("Californian FB", Font.BOLD, 7));
         btn1_1_1_13.setBackground(new Color(0, 0, 0));
-        btn1_1_1_13.setBounds(850, 387, 43, 46);
+        btn1_1_1_13.setBounds(831, 388, 43, 46);
         contentPane.add(btn1_1_1_13);
         
-        JLabel lblNewLabel = new JLabel("New label");
+        JLabel lblNewLabel = new JLabel("");
         lblNewLabel.setForeground(Color.BLACK);
-        lblNewLabel.setIcon(new ImageIcon(Acento.class.getResource("/imagens/Captura de tela 2023-05-15 164437.png")));
-        lblNewLabel.setBounds(310, 140, 837, 415);
+        lblNewLabel.setIcon(new ImageIcon(Acento.class.getResource("/imagens/Captura_de_tela_2023-05-15_164437-removebg-preview.png")));
+        lblNewLabel.setBounds(422, 155, 963, 415);
         contentPane.add(lblNewLabel);
     }
 }
