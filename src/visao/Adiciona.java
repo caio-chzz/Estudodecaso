@@ -43,7 +43,7 @@ public class Adiciona extends JFrame {
     	setBackground(new Color(0, 64, 64));
     	setTitle("Tela de edição");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 1171, 728);
+        setBounds(100, 100, 1339, 728);
         contentPane = new JPanel();
         contentPane.setBackground(new Color(143, 226, 231));
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -51,14 +51,14 @@ public class Adiciona extends JFrame {
         contentPane.setLayout(null);
 
         JPanel panelBotoes = new JPanel();
-        panelBotoes.setBackground(Color.BLACK);
-        panelBotoes.setBounds(731, 463, 468, 182);
+        panelBotoes.setBackground(new Color(0, 255, 255));
+        panelBotoes.setBounds(834, 551, 305, 82);
         contentPane.add(panelBotoes);
         panelBotoes.setLayout(null);
         
 
-        JButton btn1 = new JButton("Salvar");
-        btn1.addActionListener(new ActionListener() {
+        JButton btnSalvar = new JButton("Salvar");
+        btnSalvar.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		dispose();
         		Final f = new Final();
@@ -66,12 +66,12 @@ public class Adiciona extends JFrame {
         		f.setVisible(true);
         	}
         });
-        btn1.setForeground(new Color(0, 0, 0));
-        btn1.setFont(new Font("Californian FB", Font.BOLD, 21));
-        btn1.setBackground(new Color(128, 128, 128));
-        btn1.setBounds(173, 93, 307, 82);
+        btnSalvar.setForeground(new Color(0, 0, 0));
+        btnSalvar.setFont(new Font("Californian FB", Font.BOLD, 21));
+        btnSalvar.setBackground(new Color(128, 128, 128));
+        btnSalvar.setBounds(0, 0, 307, 82);
         //btn1.setBorder(new RounderBorder(10));
-        panelBotoes.add(btn1);
+        panelBotoes.add(btnSalvar);
 
         JLabel lblPreco1 = new JLabel("Adicione os dados do cliente:");
         lblPreco1.setForeground(Color.BLACK);
@@ -151,9 +151,9 @@ public class Adiciona extends JFrame {
         textField_5.setBounds(434, 596, 131, 30);
         contentPane.add(textField_5);
         
-        JLabel lblNewLabel = new JLabel("New label");
+        JLabel lblNewLabel = new JLabel("");
         lblNewLabel.setForeground(Color.BLACK);
-        lblNewLabel.setIcon(new ImageIcon(Adiciona.class.getResource("/imagens/usus.png")));
+        lblNewLabel.setIcon(new ImageIcon(Adiciona.class.getResource("/imagens/usus-removebg-preview.png")));
         lblNewLabel.setBounds(392, 139, 714, 184);
         contentPane.add(lblNewLabel);
     }
