@@ -52,7 +52,7 @@ public class Login extends JFrame {
 		setBounds(100, 100, 1303, 781);
 		contentPane = new JPanel();
 		contentPane.setForeground(Color.PINK);
-		contentPane.setBackground(Color.BLACK);
+		contentPane.setBackground(new Color(143, 226, 231));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -60,23 +60,25 @@ public class Login extends JFrame {
 
 		JLabel lblSenha = new JLabel("Senha:");
 		lblSenha.setFont(new Font("Tahoma", Font.BOLD, 21));
-		lblSenha.setForeground(Color.WHITE);
+		lblSenha.setForeground(Color.BLACK);
 		lblSenha.setBounds(193, 524, 103, 60);
 		contentPane.add(lblSenha);
 
 		JLabel lblEmail = new JLabel("Email:");
 		lblEmail.setFont(new Font("Tahoma", Font.BOLD, 21));
-		lblEmail.setForeground(Color.WHITE);
+		lblEmail.setForeground(Color.BLACK);
 		lblEmail.setBounds(193, 398, 70, 60);
 		contentPane.add(lblEmail);
 
 		textSenha = new JTextField();
+		textSenha.setForeground(Color.BLACK);
 		textSenha.setBackground(new Color(192, 192, 192));
 		textSenha.setBounds(306, 422, 225, 28);
 		contentPane.add(textSenha);
 		textSenha.setColumns(10);
 
 		textEmail = new JTextField();
+		textEmail.setForeground(Color.BLACK);
 		textEmail.setBackground(new Color(192, 192, 192));
 		textEmail.setColumns(10);
 		textEmail.setBounds(306, 540, 225, 28);
@@ -90,7 +92,7 @@ public class Login extends JFrame {
 		contentPane.add(btnLogin);
 
 		lblBemVindo = new JLabel("Bem Vindo!");
-		lblBemVindo.setForeground(Color.WHITE);
+		lblBemVindo.setForeground(Color.BLACK);
 		lblBemVindo.setFont(new Font("Tahoma", Font.BOLD, 40));
 		lblBemVindo.setBounds(193, 187, 409, 60);
 		contentPane.add(lblBemVindo);
@@ -111,11 +113,13 @@ public class Login extends JFrame {
 		contentPane.add(btnCadastrese);
 		
 		lblNewLabel = new JLabel("");
+		lblNewLabel.setForeground(Color.BLACK);
 		lblNewLabel.setIcon(new ImageIcon(Login.class.getResource("/imagens/Design_sem_nome__1_-removebg-preview.png")));
 		lblNewLabel.setBounds(144, 151, 1198, 619);
 		contentPane.add(lblNewLabel);
 		
 		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setForeground(Color.BLACK);
 		lblNewLabel_2.setIcon(new ImageIcon(Login.class.getResource("/imagens/Design_sem_nome__3_-removebg-preview.png")));
 		lblNewLabel_2.setBounds(1191, 68, 786, 516);
 		contentPane.add(lblNewLabel_2);

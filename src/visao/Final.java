@@ -39,14 +39,14 @@ public class Final extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 1164, 730);
         contentPane = new JPanel();
-        contentPane.setBackground(Color.BLACK);
+        contentPane.setBackground(new Color(143, 226, 231));
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
         
         JButton btnNewButton = new JButton("Sair do Sistema");
         btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        btnNewButton.setForeground(new Color(255, 255, 255));
+        btnNewButton.setForeground(Color.BLACK);
         btnNewButton.setBackground(new Color(0, 0, 0));
         btnNewButton.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
@@ -57,7 +57,7 @@ public class Final extends JFrame {
         contentPane.add(btnNewButton);
         
         JButton btnNewButton_1 = new JButton("Voltar ao Inicio");
-        btnNewButton_1.setForeground(new Color(255, 255, 255));
+        btnNewButton_1.setForeground(Color.BLACK);
         btnNewButton_1.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		dispose();
@@ -72,11 +72,13 @@ public class Final extends JFrame {
         contentPane.add(btnNewButton_1);
         
         JLabel lblNewLabel = new JLabel("New label");
+        lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setIcon(new ImageIcon(Final.class.getResource("/imagens/sai.png")));
         lblNewLabel.setBounds(884, 139, 204, 179);
         contentPane.add(lblNewLabel);
         
         JLabel lblNewLabel_1 = new JLabel("New label");
+        lblNewLabel_1.setForeground(Color.BLACK);
         lblNewLabel_1.setIcon(new ImageIcon(Final.class.getResource("/imagens/volya.png")));
         lblNewLabel_1.setBounds(371, 413, 745, 213);
         contentPane.add(lblNewLabel_1);

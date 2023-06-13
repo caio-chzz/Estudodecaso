@@ -39,7 +39,7 @@ public class Acento extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 1171, 728);
         contentPane = new JPanel();
-        contentPane.setBackground(Color.BLACK);
+        contentPane.setBackground(new Color(143, 226, 231));
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
@@ -60,7 +60,7 @@ public class Acento extends JFrame {
         		d.setVisible(true);
         	}
         });
-        btn1.setForeground(new Color(0, 0, 0));
+        btn1.setForeground(Color.BLACK);
         btn1.setFont(new Font("Californian FB", Font.BOLD, 21));
         btn1.setBackground(new Color(0, 128, 64));
         btn1.setBounds(34, 20, 241, 54);
@@ -76,7 +76,7 @@ public class Acento extends JFrame {
         		z.setVisible(true);
         	}
         });
-        btn2.setForeground(new Color(0, 0, 0));
+        btn2.setForeground(Color.BLACK);
         btn2.setFont(new Font("Californian FB", Font.BOLD, 21));
         btn2.setBackground(new Color(128, 128, 128));
         btn2.setBounds(366, 20, 247, 54);
@@ -91,13 +91,13 @@ public class Acento extends JFrame {
         btnExcluirPassageiro.setBackground(new Color(128, 64, 64));
 
         JLabel lblPreco1 = new JLabel("Escolha o acento que deseja!");
-        lblPreco1.setForeground(Color.WHITE);
+        lblPreco1.setForeground(Color.BLACK);
         lblPreco1.setFont(new Font("Constantia", Font.BOLD, 30));
         lblPreco1.setBounds(572, 45, 463, 46);
         contentPane.add(lblPreco1);
         
         JButton btn1_1 = new JButton("1º");
-        btn1_1.setForeground(new Color(255, 255, 255));
+        btn1_1.setForeground(Color.BLACK);
         btn1_1.setFont(new Font("Californian FB", Font.BOLD, 12));
         btn1_1.setBackground(new Color(0, 0, 0));
         btn1_1.setBounds(504, 326, 43, 46);
@@ -174,13 +174,14 @@ public class Acento extends JFrame {
         contentPane.add(btn1_1_1_12);
         
         JButton btn1_1_1_13 = new JButton("10º");
-        btn1_1_1_13.setForeground(new Color(255, 255, 255));
+        btn1_1_1_13.setForeground(Color.BLACK);
         btn1_1_1_13.setFont(new Font("Californian FB", Font.BOLD, 7));
         btn1_1_1_13.setBackground(new Color(0, 0, 0));
         btn1_1_1_13.setBounds(850, 387, 43, 46);
         contentPane.add(btn1_1_1_13);
         
         JLabel lblNewLabel = new JLabel("New label");
+        lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setIcon(new ImageIcon(Acento.class.getResource("/imagens/Captura de tela 2023-05-15 164437.png")));
         lblNewLabel.setBounds(310, 140, 837, 415);
         contentPane.add(lblNewLabel);

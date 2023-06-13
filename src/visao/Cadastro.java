@@ -76,7 +76,7 @@ public class Cadastro extends JFrame {
 		setBounds(100, 100, 1197, 726);
 		contentPane = new JPanel();
 		contentPane.setForeground(Color.WHITE);
-		contentPane.setBackground(Color.BLACK);
+		contentPane.setBackground(new Color(143, 226, 231));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -86,29 +86,31 @@ public class Cadastro extends JFrame {
 
 		JLabel lblNome = new JLabel("Nome: ");
 		lblNome.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		lblNome.setForeground(Color.WHITE);
+		lblNome.setForeground(Color.BLACK);
 		lblNome.setBounds(176, 226, 92, 14);
 		contentPane.add(lblNome);
 
 		JLabel lblEmail = new JLabel("Email: ");
 		lblEmail.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		lblEmail.setForeground(Color.WHITE);
+		lblEmail.setForeground(Color.BLACK);
 		lblEmail.setBounds(176, 282, 92, 17);
 		contentPane.add(lblEmail);
 
 		JLabel lblCpf = new JLabel("Cpf: ");
 		lblCpf.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		lblCpf.setForeground(Color.WHITE);
+		lblCpf.setForeground(Color.BLACK);
 		lblCpf.setBounds(176, 338, 92, 20);
 		contentPane.add(lblCpf);
 
 		txtNome = new JTextField();
+		txtNome.setForeground(Color.BLACK);
 		txtNome.setBackground(new Color(192, 192, 192));
 		txtNome.setBounds(342, 228, 412, 20);
 		contentPane.add(txtNome);
 		txtNome.setColumns(10);
 
 		txtEmail = new JTextField();
+		txtEmail.setForeground(Color.BLACK);
 		txtEmail.setBackground(new Color(192, 192, 192));
 		txtEmail.setColumns(10);
 		txtEmail.setBounds(342, 285, 412, 20);
@@ -122,6 +124,7 @@ public class Cadastro extends JFrame {
 			e.printStackTrace();
 		}
 		txtCpf = new JFormattedTextField(mascaraCpf); // polimorfismo
+		txtCpf.setForeground(Color.BLACK);
 
 		/*********/
 
@@ -131,6 +134,7 @@ public class Cadastro extends JFrame {
 		contentPane.add(txtCpf);
 
 		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.setForeground(Color.BLACK);
 		btnCadastrar.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		btnCadastrar.setBackground(new Color(128, 255, 255));
 		JButton btnLogin = new JButton("Login");
@@ -185,6 +189,7 @@ public class Cadastro extends JFrame {
 		contentPane.add(scrollPane);
 
 		textSenha = new JTextField();
+		textSenha.setForeground(Color.BLACK);
 		textSenha.setBackground(new Color(192, 192, 192));
 		textSenha.setColumns(10);
 		textSenha.setBounds(342, 394, 412, 20);
@@ -192,11 +197,12 @@ public class Cadastro extends JFrame {
 
 		JLabel lblSenha = new JLabel("Senha: ");
 		lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		lblSenha.setForeground(Color.WHITE);
+		lblSenha.setForeground(Color.BLACK);
 		lblSenha.setBounds(177, 394, 111, 14);
 		contentPane.add(lblSenha);
 
 		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setForeground(Color.BLACK);
 		lblNewLabel.setIcon(new ImageIcon(Cadastro.class.getResource("/imagens/Design sem nome (1).png")));
 		lblNewLabel.setBounds(35, 148, 336, 83);
 		contentPane.add(lblNewLabel);

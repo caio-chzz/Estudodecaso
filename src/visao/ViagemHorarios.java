@@ -50,19 +50,20 @@ public class ViagemHorarios extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 1314, 914);
         contentPane = new JPanel();
-        contentPane.setBackground(Color.PINK);
+        contentPane.setBackground(new Color(143, 226, 231));
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
         JLabel lblDestino = new JLabel("Destino: ");
         lblDestino.setIcon(new ImageIcon(ViagemHorarios.class.getResource("/imagens/Destino-removebg-preview.png")));
-        lblDestino.setForeground(Color.WHITE);
+        lblDestino.setForeground(Color.BLACK);
         lblDestino.setFont(new Font("Tahoma", Font.PLAIN, 24));
         lblDestino.setBounds(588, 91, 497, 342);
         contentPane.add(lblDestino);
 
         destinoComboBox = new JComboBox<>();
+        destinoComboBox.setForeground(Color.BLACK);
         destinoComboBox.setModel(new DefaultComboBoxModel<>(new String[] {
                 "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal",
                 "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul",
@@ -75,12 +76,13 @@ public class ViagemHorarios extends JFrame {
         contentPane.add(destinoComboBox);
 
         JLabel lblHorario = new JLabel("Horario:");
-        lblHorario.setForeground(Color.WHITE);
+        lblHorario.setForeground(Color.BLACK);
         lblHorario.setFont(new Font("Tahoma", Font.PLAIN, 24));
         lblHorario.setBounds(526, 469, 150, 30);
         contentPane.add(lblHorario);
 
         horarioComboBox = new JComboBox<>();
+        horarioComboBox.setForeground(Color.BLACK);
         horarioComboBox.setModel(new DefaultComboBoxModel<>(new String[] {
                 "10:00 AM", "2:00 PM", "6:00 PM", "10:00 PM"
         }));
@@ -89,12 +91,13 @@ public class ViagemHorarios extends JFrame {
         contentPane.add(horarioComboBox);
 
         JLabel lblClasse = new JLabel("Classe:");
-        lblClasse.setForeground(Color.WHITE);
+        lblClasse.setForeground(Color.BLACK);
         lblClasse.setFont(new Font("Tahoma", Font.PLAIN, 24));
         lblClasse.setBounds(537, 571, 150, 30);
         contentPane.add(lblClasse);
 
         classeComboBox = new JComboBox<>();
+        classeComboBox.setForeground(Color.BLACK);
         classeComboBox.setModel(new DefaultComboBoxModel<>(new String[] {
                 "Executive", "Economy"
         }));
@@ -103,6 +106,7 @@ public class ViagemHorarios extends JFrame {
         contentPane.add(classeComboBox);
 
         JButton btnConfirm = new JButton("Confirm");
+        btnConfirm.setForeground(Color.BLACK);
         btnConfirm.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String destination = (String) destinoComboBox.getSelectedItem();
