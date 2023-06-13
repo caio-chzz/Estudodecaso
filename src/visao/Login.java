@@ -24,7 +24,6 @@ public class Login extends JFrame {
 	private JLabel lblBemVindo;
 	private JLabel lblNoPossuiCadastro;
 	private JButton btnCadastrese;
-	private JLabel lblFlyingairs;
 	private JLabel lblNewLabel;
 
 	public static void main(String[] args) {
@@ -48,9 +47,9 @@ public class Login extends JFrame {
 	public Login() {
 		setTitle("Tela inicial");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1168, 718);
+		setBounds(100, 100, 1303, 718);
 		contentPane = new JPanel();
-		contentPane.setBackground(Color.BLACK);
+		contentPane.setBackground(new Color(128, 0, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -59,44 +58,44 @@ public class Login extends JFrame {
 		JLabel lblSenha = new JLabel("Senha:");
 		lblSenha.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblSenha.setForeground(Color.WHITE);
-		lblSenha.setBounds(567, 392, 103, 60);
+		lblSenha.setBounds(839, 412, 103, 60);
 		contentPane.add(lblSenha);
 
 		JLabel lblEmail = new JLabel("Email:");
 		lblEmail.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblEmail.setForeground(Color.WHITE);
-		lblEmail.setBounds(567, 271, 70, 60);
+		lblEmail.setBounds(839, 291, 70, 60);
 		contentPane.add(lblEmail);
 
 		textSenha = new JTextField();
 		textSenha.setBackground(new Color(192, 192, 192));
-		textSenha.setBounds(725, 296, 208, 20);
+		textSenha.setBounds(997, 316, 208, 20);
 		contentPane.add(textSenha);
 		textSenha.setColumns(10);
 
 		textEmail = new JTextField();
 		textEmail.setBackground(new Color(192, 192, 192));
 		textEmail.setColumns(10);
-		textEmail.setBounds(725, 417, 208, 20);
+		textEmail.setBounds(997, 437, 208, 20);
 		contentPane.add(textEmail);
 
 		JButton btnLogin = new JButton("Login");
 		btnLogin.setBackground(new Color(128, 128, 128));
 		btnLogin.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		btnLogin.setForeground(Color.BLACK);
-		btnLogin.setBounds(567, 529, 145, 60);
+		btnLogin.setBounds(839, 549, 145, 60);
 		contentPane.add(btnLogin);
 
 		lblBemVindo = new JLabel("Bem Vindo!");
 		lblBemVindo.setForeground(Color.WHITE);
 		lblBemVindo.setFont(new Font("Tahoma", Font.BOLD, 40));
-		lblBemVindo.setBounds(618, 160, 409, 60);
+		lblBemVindo.setBounds(868, 138, 409, 60);
 		contentPane.add(lblBemVindo);
 
 		lblNoPossuiCadastro = new JLabel("Não possui cadastro?");
 		lblNoPossuiCadastro.setForeground(Color.WHITE);
 		lblNoPossuiCadastro.setFont(new Font("Tahoma", Font.BOLD, 12));
-		lblNoPossuiCadastro.setBounds(755, 475, 191, 60);
+		lblNoPossuiCadastro.setBounds(1027, 495, 191, 60);
 		contentPane.add(lblNoPossuiCadastro);
 
 		btnCadastrese = new JButton("Cadastre-se");
@@ -111,18 +110,12 @@ public class Login extends JFrame {
 		btnCadastrese.setBackground(new Color(128, 128, 128));
 		btnCadastrese.setForeground(Color.BLACK);
 		btnCadastrese.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		btnCadastrese.setBounds(795, 529, 168, 60);
+		btnCadastrese.setBounds(1067, 549, 168, 60);
 		contentPane.add(btnCadastrese);
-
-		lblFlyingairs = new JLabel("Flying.airs");
-		lblFlyingairs.setForeground(new Color(0, 128, 192));
-		lblFlyingairs.setFont(new Font("Lucida Handwriting", Font.BOLD | Font.ITALIC, 21));
-		lblFlyingairs.setBounds(223, 126, 176, 60);
-		contentPane.add(lblFlyingairs);
-
+		
 		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(Login.class.getResource("/imagens/Design sem nome (1).png")));
-		lblNewLabel.setBounds(-91, 64, 353, 233);
+		lblNewLabel.setIcon(new ImageIcon(Login.class.getResource("/imagens/viaofundo2.png")));
+		lblNewLabel.setBounds(-566, -27, 1288, 1220);
 		contentPane.add(lblNewLabel);
 
 		btnLogin.addActionListener(new ActionListener() {

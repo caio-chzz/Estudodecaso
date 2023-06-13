@@ -11,13 +11,15 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ImageIcon;
+import javax.swing.JTextField;
 
 public class ViagemHorarios extends JFrame {
 
     private JPanel contentPane;
-    private JComboBox<String> destinationComboBox;
-    private JComboBox<String> timeComboBox;
-    private JComboBox<String> classComboBox;
+    private JComboBox<String> destinoComboBox;
+    private JComboBox<String> horarioComboBox;
+    private JComboBox<String> classeComboBox;
 
     public static void main(String[] args) {
         try {
@@ -46,65 +48,66 @@ public class ViagemHorarios extends JFrame {
 
     public ViagemHorarios() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 600, 500);
+        setBounds(100, 100, 1314, 914);
         contentPane = new JPanel();
-        contentPane.setBackground(Color.BLACK);
+        contentPane.setBackground(Color.PINK);
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        JLabel lblDestination = new JLabel("Destination:");
-        lblDestination.setForeground(Color.WHITE);
-        lblDestination.setFont(new Font("Tahoma", Font.PLAIN, 24));
-        lblDestination.setBounds(100, 100, 150, 30);
-        contentPane.add(lblDestination);
+        JLabel lblDestino = new JLabel("Destino: ");
+        lblDestino.setIcon(new ImageIcon(ViagemHorarios.class.getResource("/imagens/Destino-removebg-preview.png")));
+        lblDestino.setForeground(Color.WHITE);
+        lblDestino.setFont(new Font("Tahoma", Font.PLAIN, 24));
+        lblDestino.setBounds(588, 91, 497, 342);
+        contentPane.add(lblDestino);
 
-        destinationComboBox = new JComboBox<>();
-        destinationComboBox.setModel(new DefaultComboBoxModel<>(new String[] {
+        destinoComboBox = new JComboBox<>();
+        destinoComboBox.setModel(new DefaultComboBoxModel<>(new String[] {
                 "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal",
                 "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul",
                 "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro",
                 "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina",
                 "São Paulo", "Sergipe", "Tocantins", "New York", "Paris", "Tokyo"
         }));
-        destinationComboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-        destinationComboBox.setBounds(250, 100, 200, 30);
-        contentPane.add(destinationComboBox);
+        destinoComboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        destinoComboBox.setBounds(743, 393, 200, 30);
+        contentPane.add(destinoComboBox);
 
-        JLabel lblTime = new JLabel("Time:");
-        lblTime.setForeground(Color.WHITE);
-        lblTime.setFont(new Font("Tahoma", Font.PLAIN, 24));
-        lblTime.setBounds(100, 200, 150, 30);
-        contentPane.add(lblTime);
+        JLabel lblHorario = new JLabel("Horario:");
+        lblHorario.setForeground(Color.WHITE);
+        lblHorario.setFont(new Font("Tahoma", Font.PLAIN, 24));
+        lblHorario.setBounds(526, 469, 150, 30);
+        contentPane.add(lblHorario);
 
-        timeComboBox = new JComboBox<>();
-        timeComboBox.setModel(new DefaultComboBoxModel<>(new String[] {
+        horarioComboBox = new JComboBox<>();
+        horarioComboBox.setModel(new DefaultComboBoxModel<>(new String[] {
                 "10:00 AM", "2:00 PM", "6:00 PM", "10:00 PM"
         }));
-        timeComboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-        timeComboBox.setBounds(250, 200, 200, 30);
-        contentPane.add(timeComboBox);
+        horarioComboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        horarioComboBox.setBounds(743, 469, 200, 30);
+        contentPane.add(horarioComboBox);
 
-        JLabel lblClass = new JLabel("Class:");
-        lblClass.setForeground(Color.WHITE);
-        lblClass.setFont(new Font("Tahoma", Font.PLAIN, 24));
-        lblClass.setBounds(100, 300, 150, 30);
-        contentPane.add(lblClass);
+        JLabel lblClasse = new JLabel("Classe:");
+        lblClasse.setForeground(Color.WHITE);
+        lblClasse.setFont(new Font("Tahoma", Font.PLAIN, 24));
+        lblClasse.setBounds(537, 571, 150, 30);
+        contentPane.add(lblClasse);
 
-        classComboBox = new JComboBox<>();
-        classComboBox.setModel(new DefaultComboBoxModel<>(new String[] {
+        classeComboBox = new JComboBox<>();
+        classeComboBox.setModel(new DefaultComboBoxModel<>(new String[] {
                 "Executive", "Economy"
         }));
-        classComboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-        classComboBox.setBounds(250, 300, 200, 30);
-        contentPane.add(classComboBox);
+        classeComboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        classeComboBox.setBounds(743, 571, 200, 30);
+        contentPane.add(classeComboBox);
 
         JButton btnConfirm = new JButton("Confirm");
         btnConfirm.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                String destination = (String) destinationComboBox.getSelectedItem();
-                String time = (String) timeComboBox.getSelectedItem();
-                String ticketClass = (String) classComboBox.getSelectedItem();
+                String destination = (String) destinoComboBox.getSelectedItem();
+                String time = (String) horarioComboBox.getSelectedItem();
+                String ticketClass = (String) classeComboBox.getSelectedItem();
 
                 System.out.println("Destination: " + destination);
                 System.out.println("Time: " + time);
@@ -118,7 +121,7 @@ public class ViagemHorarios extends JFrame {
             }
         });
         btnConfirm.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        btnConfirm.setBounds(250, 400, 150, 40);
+        btnConfirm.setBounds(769, 747, 150, 40);
         contentPane.add(btnConfirm);
     }
 }
