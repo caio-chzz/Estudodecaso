@@ -10,8 +10,12 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.JRadioButton;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 public class Final extends JFrame {
@@ -38,11 +42,21 @@ public class Final extends JFrame {
     	setTitle("Obrigado!");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 1164, 730);
-        contentPane = new JPanel();
-        contentPane.setBackground(new Color(143, 226, 231));
-        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        setContentPane(contentPane);
-        contentPane.setLayout(null);
+        BufferedImage bg = null;
+		;
+		try {
+			bg = ImageIO.read(new File("src/imagens/fundoSalvador.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		contentPane = new VBackGround(bg);
+		contentPane.setBackground(new Color(0, 156, 156));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
         
         JButton btnNewButton = new JButton("Sair do Sistema");
         btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 21));
