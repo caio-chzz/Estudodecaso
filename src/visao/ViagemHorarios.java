@@ -273,7 +273,7 @@ public class ViagemHorarios extends JFrame {
         
         JLabel lblNewLabel = new JLabel("");
         lblNewLabel.setForeground(Color.BLACK);
-        lblNewLabel.setIcon(new ImageIcon(Acento.class.getResource("/imagens/Captura_de_tela_2023-05-15_164437-removebg-preview.png")));
+        lblNewLabel.setIcon(new ImageIcon(ViagemHorarios.class.getResource("/imagens/Captura_de_tela_2023-05-15_164437-removebg-preview.png")));
         lblNewLabel.setBounds(422, 155, 963, 415);
         contentPane.add(lblNewLabel);
     }
