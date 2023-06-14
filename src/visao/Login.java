@@ -130,6 +130,15 @@ public class Login extends JFrame {
 		lblNewLabel_1.setIcon(new ImageIcon(Login.class.getResource("/imagens/Design_sem_nome-removebg-preview.png")));
 		lblNewLabel_1.setBounds(720, 210, 557, 361);
 		contentPane.add(lblNewLabel_1);
+		
+		JButton btnSair = new JButton("Sair");
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
+		btnSair.setBounds(28, 675, 89, 23);
+		contentPane.add(btnSair);
 
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
