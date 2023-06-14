@@ -10,6 +10,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import net.miginfocom.swing.MigLayout;
 
 public class Pagamento extends JFrame {
 
@@ -50,18 +51,13 @@ public class Pagamento extends JFrame {
 	        setBounds(100, 100, 1314, 914);
 	        BufferedImage bg = null;
 			;
-			try {
-				bg = ImageIO.read(new File("src/imagens/fundoSalvador.png"));
-
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-
+			
 			contentPane = new VBackGround(bg);
 			contentPane.setBackground(new Color(0, 156, 156));
 			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
+		contentPane.setLayout(new MigLayout("", "[301.00][621.00][563.00]", "[861.00,grow]"));
 	}
 
 }
