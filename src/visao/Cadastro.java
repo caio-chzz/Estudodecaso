@@ -19,11 +19,16 @@ import controle.UsuarioDAO;
 import modelo.Usuario;
 
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.SystemColor;
+
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 public class Cadastro extends JFrame {
@@ -74,11 +79,21 @@ public class Cadastro extends JFrame {
 	public Cadastro() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1197, 726);
-		contentPane = new JPanel();
-		contentPane.setForeground(Color.WHITE);
-		contentPane.setBackground(new Color(143, 226, 231));
+		BufferedImage bg = null;
+		;
+		try {
+			bg = ImageIO.read(new File("src/imagens/fundoSalvador.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		contentPane = new VBackGround(bg);
+		contentPane.setBackground(new Color(0, 156, 156));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 

@@ -4,6 +4,11 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -49,12 +54,21 @@ public class ViagemHorarios extends JFrame {
     public ViagemHorarios() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 1314, 914);
-        contentPane = new JPanel();
-        contentPane.setBackground(new Color(143, 226, 231));
-        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        setContentPane(contentPane);
-        contentPane.setLayout(null);
+        BufferedImage bg = null;
+		;
+		try {
+			bg = ImageIO.read(new File("src/imagens/fundoSalvador.png"));
 
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		contentPane = new VBackGround(bg);
+		contentPane.setBackground(new Color(0, 156, 156));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
         JLabel lblDestino = new JLabel("Destino: ");
         lblDestino.setIcon(new ImageIcon(ViagemHorarios.class.getResource("/imagens/Destino-removebg-preview.png")));
         lblDestino.setForeground(Color.BLACK);

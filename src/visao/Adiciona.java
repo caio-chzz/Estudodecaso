@@ -11,8 +11,13 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.text.ParseException;
 import java.awt.event.ActionEvent;
+
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.text.MaskFormatter;
 
@@ -48,11 +53,21 @@ public class Adiciona extends JFrame {
     	setTitle("Tela de edição");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 1339, 728);
-        contentPane = new JPanel();
-        contentPane.setBackground(new Color(143, 226, 231));
-        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        setContentPane(contentPane);
-        contentPane.setLayout(null);
+        BufferedImage bg = null;
+		;
+		try {
+			bg = ImageIO.read(new File("src/imagens/fundoSalvador.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		contentPane = new VBackGround(bg);
+		contentPane.setBackground(new Color(0, 156, 156));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
 
         JPanel panelBotoes = new JPanel();
         panelBotoes.setBackground(new Color(0, 255, 255));
