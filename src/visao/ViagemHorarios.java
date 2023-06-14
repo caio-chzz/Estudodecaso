@@ -69,12 +69,6 @@ public class ViagemHorarios extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-        JLabel lblDestino = new JLabel("Destino: ");
-        lblDestino.setIcon(new ImageIcon(ViagemHorarios.class.getResource("/imagens/Destino-removebg-preview.png")));
-        lblDestino.setForeground(Color.BLACK);
-        lblDestino.setFont(new Font("Tahoma", Font.PLAIN, 24));
-        lblDestino.setBounds(588, 91, 497, 342);
-        contentPane.add(lblDestino);
 
         destinoComboBox = new JComboBox<>();
         destinoComboBox.setForeground(Color.BLACK);
@@ -86,13 +80,13 @@ public class ViagemHorarios extends JFrame {
                 "São Paulo", "Sergipe", "Tocantins", "New York", "Paris", "Tokyo"
         }));
         destinoComboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-        destinoComboBox.setBounds(743, 393, 200, 30);
+        destinoComboBox.setBounds(1232, 130, 200, 30);
         contentPane.add(destinoComboBox);
 
         JLabel lblHorario = new JLabel("Horario:");
         lblHorario.setForeground(Color.BLACK);
         lblHorario.setFont(new Font("Tahoma", Font.PLAIN, 24));
-        lblHorario.setBounds(526, 469, 150, 30);
+        lblHorario.setBounds(1015, 206, 150, 30);
         contentPane.add(lblHorario);
 
         horarioComboBox = new JComboBox<>();
@@ -101,13 +95,13 @@ public class ViagemHorarios extends JFrame {
                 "10:00 AM", "2:00 PM", "6:00 PM", "10:00 PM"
         }));
         horarioComboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-        horarioComboBox.setBounds(743, 469, 200, 30);
+        horarioComboBox.setBounds(1232, 206, 200, 30);
         contentPane.add(horarioComboBox);
 
         JLabel lblClasse = new JLabel("Classe:");
         lblClasse.setForeground(Color.BLACK);
         lblClasse.setFont(new Font("Tahoma", Font.PLAIN, 24));
-        lblClasse.setBounds(537, 571, 150, 30);
+        lblClasse.setBounds(1026, 308, 150, 30);
         contentPane.add(lblClasse);
 
         classeComboBox = new JComboBox<>();
@@ -116,7 +110,7 @@ public class ViagemHorarios extends JFrame {
                 "Executive", "Economy"
         }));
         classeComboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
-        classeComboBox.setBounds(743, 571, 200, 30);
+        classeComboBox.setBounds(1232, 308, 200, 30);
         contentPane.add(classeComboBox);
 
         JButton btnConfirm = new JButton("Confirm");
@@ -139,7 +133,148 @@ public class ViagemHorarios extends JFrame {
             }
         });
         btnConfirm.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        btnConfirm.setBounds(769, 747, 150, 40);
+        btnConfirm.setBounds(1246, 530, 150, 40);
         contentPane.add(btnConfirm);
+        JPanel panelBotoes = new JPanel();
+        panelBotoes.setBackground(new Color(16, 1, 146));
+        panelBotoes.setBounds(295, 615, 994, 163);
+        contentPane.add(panelBotoes);
+        panelBotoes.setLayout(null);
+        
+
+        JButton btn1 = new JButton("Adicionar Passageiro");
+        btn1.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		dispose();
+        		Adiciona d = new Adiciona();
+        		d.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        		d.setVisible(true);
+        	}
+        });
+        btn1.setForeground(Color.BLACK);
+        btn1.setFont(new Font("Californian FB", Font.BOLD, 21));
+        btn1.setBackground(new Color(0, 128, 64));
+        btn1.setBounds(34, 20, 241, 54);
+        //btn1.setBorder(new RounderBorder(10));
+        panelBotoes.add(btn1);
+
+        JButton btn2 = new JButton("Editar Passageiro");
+        btn2.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		dispose();
+        		Editar z = new Editar();
+        		z.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        		z.setVisible(true);
+        	}
+        });
+        btn2.setForeground(Color.BLACK);
+        btn2.setFont(new Font("Californian FB", Font.BOLD, 21));
+        btn2.setBackground(new Color(128, 128, 128));
+        btn2.setBounds(366, 20, 247, 54);
+        //btn2.setBorder(new RounderBorder(10));
+        panelBotoes.add(btn2);
+        
+        JButton btnExcluirPassageiro = new JButton("Excluir Passageiro");
+        btnExcluirPassageiro.setBounds(703, 20, 230, 54);
+        panelBotoes.add(btnExcluirPassageiro);
+        btnExcluirPassageiro.setForeground(Color.BLACK);
+        btnExcluirPassageiro.setFont(new Font("Californian FB", Font.BOLD, 21));
+        btnExcluirPassageiro.setBackground(new Color(128, 64, 64));
+
+        JLabel lblPreco1 = new JLabel("Escolha o acento que deseja!");
+        lblPreco1.setForeground(Color.BLACK);
+        lblPreco1.setFont(new Font("Constantia", Font.BOLD, 30));
+        lblPreco1.setBounds(572, 45, 463, 46);
+        contentPane.add(lblPreco1);
+        
+        JButton btn1_1 = new JButton("1º");
+        btn1_1.setForeground(Color.BLACK);
+        btn1_1.setFont(new Font("Californian FB", Font.BOLD, 12));
+        btn1_1.setBackground(new Color(255, 255, 128));
+        btn1_1.setBounds(504, 326, 43, 46);
+        contentPane.add(btn1_1);
+        
+        JButton btn1_1_1_1 = new JButton("2º");
+        btn1_1_1_1.setForeground(Color.BLACK);
+        btn1_1_1_1.setFont(new Font("Californian FB", Font.BOLD, 11));
+        btn1_1_1_1.setBackground(new Color(255, 255, 128));
+        btn1_1_1_1.setBounds(504, 387, 43, 46);
+        contentPane.add(btn1_1_1_1);
+        
+        JButton btn1_1_1_2 = new JButton("3º");
+        btn1_1_1_2.setForeground(Color.BLACK);
+        btn1_1_1_2.setFont(new Font("Californian FB", Font.BOLD, 11));
+        btn1_1_1_2.setBackground(new Color(255, 255, 128));
+        btn1_1_1_2.setBounds(587, 326, 43, 46);
+        contentPane.add(btn1_1_1_2);
+        
+        JButton btn1_1_1_3 = new JButton("4º");
+        btn1_1_1_3.setForeground(Color.BLACK);
+        btn1_1_1_3.setFont(new Font("Californian FB", Font.BOLD, 9));
+        btn1_1_1_3.setBackground(new Color(255, 255, 128));
+        btn1_1_1_3.setBounds(587, 387, 43, 46);
+        contentPane.add(btn1_1_1_3);
+        
+        JButton btn1_1_1_4 = new JButton("5º");
+        btn1_1_1_4.setForeground(Color.BLACK);
+        btn1_1_1_4.setFont(new Font("Californian FB", Font.BOLD, 11));
+        btn1_1_1_4.setBackground(new Color(255, 255, 128));
+        btn1_1_1_4.setBounds(673, 326, 43, 46);
+        contentPane.add(btn1_1_1_4);
+        
+        JButton btn1_1_1_5 = new JButton("6º");
+        btn1_1_1_5.setForeground(Color.BLACK);
+        btn1_1_1_5.setFont(new Font("Californian FB", Font.BOLD, 9));
+        btn1_1_1_5.setBackground(new Color(255, 255, 128));
+        btn1_1_1_5.setBounds(673, 387, 43, 46);
+        contentPane.add(btn1_1_1_5);
+        
+        JButton btn1_1_1_6 = new JButton("8º");
+        btn1_1_1_6.setForeground(Color.BLACK);
+        btn1_1_1_6.setFont(new Font("Californian FB", Font.BOLD, 10));
+        btn1_1_1_6.setBackground(new Color(255, 255, 128));
+        btn1_1_1_6.setBounds(764, 387, 43, 46);
+        contentPane.add(btn1_1_1_6);
+        
+        JButton btn1_1_1_9 = new JButton("7º");
+        btn1_1_1_9.setForeground(Color.BLACK);
+        btn1_1_1_9.setFont(new Font("Californian FB", Font.BOLD, 10));
+        btn1_1_1_9.setBackground(new Color(255, 255, 128));
+        btn1_1_1_9.setBounds(764, 326, 43, 46);
+        contentPane.add(btn1_1_1_9);
+        
+        JButton btn1_1_1_10 = new JButton("11º");
+        btn1_1_1_10.setForeground(Color.BLACK);
+        btn1_1_1_10.setFont(new Font("Californian FB", Font.BOLD, 8));
+        btn1_1_1_10.setBackground(new Color(255, 255, 128));
+        btn1_1_1_10.setBounds(910, 326, 43, 46);
+        contentPane.add(btn1_1_1_10);
+        
+        JButton btn1_1_1_11 = new JButton("12º");
+        btn1_1_1_11.setForeground(new Color(255, 255, 255));
+        btn1_1_1_11.setFont(new Font("Californian FB", Font.BOLD, 7));
+        btn1_1_1_11.setBackground(new Color(255, 255, 128));
+        btn1_1_1_11.setBounds(910, 387, 43, 46);
+        contentPane.add(btn1_1_1_11);
+        
+        JButton btn1_1_1_12 = new JButton("9º");
+        btn1_1_1_12.setForeground(Color.BLACK);
+        btn1_1_1_12.setFont(new Font("Californian FB", Font.BOLD, 10));
+        btn1_1_1_12.setBackground(new Color(255, 255, 128));
+        btn1_1_1_12.setBounds(828, 331, 43, 46);
+        contentPane.add(btn1_1_1_12);
+        
+        JButton btn1_1_1_13 = new JButton("10º");
+        btn1_1_1_13.setForeground(Color.BLACK);
+        btn1_1_1_13.setFont(new Font("Californian FB", Font.BOLD, 7));
+        btn1_1_1_13.setBackground(new Color(255, 255, 128));
+        btn1_1_1_13.setBounds(831, 388, 43, 46);
+        contentPane.add(btn1_1_1_13);
+        
+        JLabel lblNewLabel = new JLabel("");
+        lblNewLabel.setForeground(Color.BLACK);
+        lblNewLabel.setIcon(new ImageIcon(Acento.class.getResource("/imagens/Captura_de_tela_2023-05-15_164437-removebg-preview.png")));
+        lblNewLabel.setBounds(422, 155, 963, 415);
+        contentPane.add(lblNewLabel);
     }
 }

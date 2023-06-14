@@ -71,36 +71,38 @@ public class Login extends JFrame {
 		JLabel lblSenha = new JLabel("Senha:");
 		lblSenha.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblSenha.setForeground(Color.BLACK);
-		lblSenha.setBounds(792, 565, 103, 60);
+		lblSenha.setBounds(772, 318, 103, 60);
 		contentPane.add(lblSenha);
 
 		JLabel lblEmail = new JLabel("Email:");
 		lblEmail.setFont(new Font("Tahoma", Font.BOLD, 21));
 		lblEmail.setForeground(Color.BLACK);
-		lblEmail.setBounds(792, 439, 70, 60);
+		lblEmail.setBounds(772, 247, 70, 60);
 		contentPane.add(lblEmail);
 
 		textSenha = new JTextField();
+		textSenha.setBorder(null);
 		textSenha.setOpaque(false);
 		textSenha.setForeground(Color.BLACK);
 		textSenha.setBackground(new Color(192, 192, 192));
-		textSenha.setBounds(905, 463, 225, 28);
+		textSenha.setBounds(926, 260, 132, 39);
 		contentPane.add(textSenha);
 		textSenha.setColumns(10);
 
 		textEmail = new JTextField();
+		textEmail.setBorder(null);
 		textEmail.setOpaque(false);
 		textEmail.setForeground(Color.BLACK);
 		textEmail.setBackground(new Color(192, 192, 192));
 		textEmail.setColumns(10);
-		textEmail.setBounds(905, 581, 225, 28);
+		textEmail.setBounds(926, 322, 132, 45);
 		contentPane.add(textEmail);
 
 		JButton btnLogin = new JButton("Login");
 		btnLogin.setBackground(new Color(128, 128, 128));
 		btnLogin.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		btnLogin.setForeground(Color.BLACK);
-		btnLogin.setBounds(772, 712, 145, 60);
+		btnLogin.setBounds(772, 652, 145, 60);
 		contentPane.add(btnLogin);
 
 		btnCadastrese = new JButton("Cadastre-se");
@@ -115,14 +117,19 @@ public class Login extends JFrame {
 		btnCadastrese.setBackground(new Color(128, 128, 128));
 		btnCadastrese.setForeground(Color.BLACK);
 		btnCadastrese.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		btnCadastrese.setBounds(962, 712, 168, 60);
+		btnCadastrese.setBounds(962, 652, 168, 60);
 		contentPane.add(btnCadastrese);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel.setIcon(new ImageIcon(Login.class.getResource("/imagens/usus-removebg-preview.png")));
-		lblNewLabel.setBounds(391, 11, 646, 543);
+		lblNewLabel.setBounds(395, -126, 646, 543);
 		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(Login.class.getResource("/imagens/Design_sem_nome-removebg-preview.png")));
+		lblNewLabel_1.setBounds(720, 210, 557, 361);
+		contentPane.add(lblNewLabel_1);
 
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
