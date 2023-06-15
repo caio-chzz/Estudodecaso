@@ -17,7 +17,9 @@ public class Tela_Login extends JFrame {
 	private JTextField textEmail;
 	private JTextField textSenha;
 
-	
+	/**
+	 * Launch the application.
+	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -31,7 +33,9 @@ public class Tela_Login extends JFrame {
 		});
 	}
 
-	
+	/**
+	 * Create the frame.
+	 */
 	public Tela_Login() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -57,10 +61,7 @@ public class Tela_Login extends JFrame {
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
-				Tela_voos tela_voos = new Tela_voos();
-				tela_voos.setExtendedState(JFrame.MAXIMIZED_BOTH); // Maximize a tela
-				tela_voos.setVisible(true);
+			
 			}
 		});
 		contentPane.add(btnLogin);
