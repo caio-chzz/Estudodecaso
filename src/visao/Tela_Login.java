@@ -7,8 +7,12 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class Tela_Login extends JFrame {
@@ -26,6 +30,7 @@ public class Tela_Login extends JFrame {
 				try {
 					Tela_Login frame = new Tela_Login();
 					frame.setVisible(true);
+					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -39,7 +44,16 @@ public class Tela_Login extends JFrame {
 	public Tela_Login() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
+		BufferedImage bg = null;
+		
+		try {
+			bg = ImageIO.read(new File("src/imagens/fundoSalvador.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		contentPane = new VBackGround(bg);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
