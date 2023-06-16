@@ -14,6 +14,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class Tela_Login extends JFrame {
 
@@ -43,7 +46,7 @@ public class Tela_Login extends JFrame {
 	 */
 	public Tela_Login() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 837, 437);
 		BufferedImage bg = null;
 		
 		try {
@@ -59,17 +62,13 @@ public class Tela_Login extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel lblEmail = new JLabel("Email");
-		contentPane.add(lblEmail);
 		
 		textEmail = new JTextField();
-		contentPane.add(textEmail);
 		textEmail.setColumns(10);
 		
 		JLabel lblSenha = new JLabel("Senha");
-		contentPane.add(lblSenha);
 		
 		textSenha = new JTextField();
-		contentPane.add(textSenha);
 		textSenha.setColumns(10);
 		
 		JButton btnLogin = new JButton("Login");
@@ -81,7 +80,6 @@ public class Tela_Login extends JFrame {
 				menu.setVisible(true);
 			}
 		});
-		contentPane.add(btnLogin);
 		
 		JButton btnCadastrodUsuario = new JButton("Cadastre-se");
 		btnCadastrodUsuario.addActionListener(new ActionListener() {
@@ -93,7 +91,6 @@ public class Tela_Login extends JFrame {
 			
 			}
 		});
-		contentPane.add(btnCadastrodUsuario);
 		
 		JButton btnSair = new JButton("Sair");
 		btnSair.addActionListener(new ActionListener() {
@@ -101,7 +98,48 @@ public class Tela_Login extends JFrame {
 				dispose();
 			}
 		});
-		contentPane.add(btnSair);
+		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		gl_contentPane.setHorizontalGroup(
+			gl_contentPane.createParallelGroup(Alignment.TRAILING)
+				.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
+					.addGap(194)
+					.addComponent(btnLogin)
+					.addGap(71)
+					.addComponent(btnCadastrodUsuario)
+					.addContainerGap(398, Short.MAX_VALUE))
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGap(202)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
+						.addComponent(lblSenha, Alignment.TRAILING)
+						.addComponent(lblEmail, Alignment.TRAILING))
+					.addGap(18)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
+						.addComponent(textEmail)
+						.addComponent(textSenha, GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE))
+					.addContainerGap(436, Short.MAX_VALUE))
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addContainerGap(760, Short.MAX_VALUE)
+					.addComponent(btnSair))
+		);
+		gl_contentPane.setVerticalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addComponent(btnSair)
+					.addGap(174)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblSenha)
+						.addComponent(textSenha, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addGap(32)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblEmail)
+						.addComponent(textEmail, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addGap(55)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnLogin)
+						.addComponent(btnCadastrodUsuario))
+					.addGap(41))
+		);
+		contentPane.setLayout(gl_contentPane);
 	}
 
 }
