@@ -61,7 +61,10 @@ public class Tela_Login extends JFrame {
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			
+				dispose();
+				Tela_Menu menu = new Tela_Menu();
+				menu.setExtendedState(JFrame.MAXIMIZED_BOTH); // Maximize a tela
+				menu.setVisible(true);
 			}
 		});
 		contentPane.add(btnLogin);
