@@ -100,13 +100,15 @@ public class Tela_Login extends JFrame {
 		});
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.TRAILING)
-				.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(194)
 					.addComponent(btnLogin)
 					.addGap(71)
 					.addComponent(btnCadastrodUsuario)
-					.addContainerGap(398, Short.MAX_VALUE))
+					.addPreferredGap(ComponentPlacement.RELATED, 291, Short.MAX_VALUE)
+					.addComponent(btnSair)
+					.addGap(56))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(202)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
@@ -117,15 +119,11 @@ public class Tela_Login extends JFrame {
 						.addComponent(textEmail)
 						.addComponent(textSenha, GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE))
 					.addContainerGap(436, Short.MAX_VALUE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap(760, Short.MAX_VALUE)
-					.addComponent(btnSair))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addComponent(btnSair)
-					.addGap(174)
+					.addGap(197)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblSenha)
 						.addComponent(textSenha, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
@@ -136,7 +134,8 @@ public class Tela_Login extends JFrame {
 					.addGap(55)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(btnLogin)
-						.addComponent(btnCadastrodUsuario))
+						.addComponent(btnCadastrodUsuario)
+						.addComponent(btnSair))
 					.addGap(41))
 		);
 		contentPane.setLayout(gl_contentPane);

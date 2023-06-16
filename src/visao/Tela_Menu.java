@@ -17,7 +17,7 @@ public class Tela_Menu extends JFrame {
 	
 	public Tela_Menu() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 1104, 592);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -59,23 +59,11 @@ public class Tela_Menu extends JFrame {
 		contentPane.add(btnAdicionarVoo);
 		
 		JLabel lblVoos = new JLabel("Voôs disponíveis");
-		lblVoos.setBounds(224, 32, 111, 14);
+		lblVoos.setBounds(259, 38, 111, 14);
 		contentPane.add(lblVoos);
 		
-		JButton btnNewButton = new JButton("VoltarLogin");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				dispose();
-				Tela_Login login = new Tela_Login();
-				login.setExtendedState(JFrame.MAXIMIZED_BOTH); // Maximize a tela
-				login.setVisible(true);
-			}
-		});
-		btnNewButton.setBounds(10, 123, 154, 23);
-		contentPane.add(btnNewButton);
-		
 		JLabel lblNewLabel = new JLabel("JTable com voos cadastrados");
-		lblNewLabel.setBounds(189, 78, 196, 138);
+		lblNewLabel.setBounds(322, 122, 196, 138);
 		contentPane.add(lblNewLabel);
 	}
 }

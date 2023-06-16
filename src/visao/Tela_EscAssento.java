@@ -70,18 +70,6 @@ public class Tela_EscAssento extends JFrame {
 		contentPane.add(txtInfos);
 		txtInfos.setColumns(10);
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("Assento Vip\r\n");
-		rdbtnNewRadioButton.setBounds(109, 340, 109, 23);
-		contentPane.add(rdbtnNewRadioButton);
-		
-		JRadioButton rdbtnAssentoLivre = new JRadioButton("Assento Livre\r\n\r\n");
-		rdbtnAssentoLivre.setBounds(280, 340, 109, 23);
-		contentPane.add(rdbtnAssentoLivre);
-		
-		JRadioButton rdbtnAssentoOcupado = new JRadioButton("Assento Ocupado\r\n\r\n");
-		rdbtnAssentoOcupado.setBounds(461, 340, 170, 23);
-		contentPane.add(rdbtnAssentoOcupado);
-		
 		JButton btnSalvar = new JButton("Salvar\r\n");
 		btnSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -114,5 +102,13 @@ public class Tela_EscAssento extends JFrame {
 		});
 		btnSair.setBounds(696, 11, 89, 23);
 		contentPane.add(btnSair);
+		
+		JLabel lblNewLabel = new JLabel("assento ocupado");
+		lblNewLabel.setBounds(200, 342, 97, 14);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Assento livre");
+		lblNewLabel_1.setBounds(377, 342, 95, 14);
+		contentPane.add(lblNewLabel_1);
 	}
 }

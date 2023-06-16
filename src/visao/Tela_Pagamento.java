@@ -10,10 +10,12 @@ import javax.swing.JButton;
 import javax.swing.JRadioButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
 
 public class Tela_Pagamento extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField txtRecebeValorFixo;
 
 	public Tela_Pagamento() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -84,6 +86,16 @@ public class Tela_Pagamento extends JFrame {
 		});
 		btnVoltar.setBounds(10, 11, 89, 23);
 		contentPane.add(btnVoltar);
+		
+		JLabel lblValorTotal = new JLabel("Valor total");
+		lblValorTotal.setBounds(643, 59, 111, 54);
+		contentPane.add(lblValorTotal);
+		
+		txtRecebeValorFixo = new JTextField();
+		txtRecebeValorFixo.setText("Recebe valor fixo");
+		txtRecebeValorFixo.setEnabled(false);
+		txtRecebeValorFixo.setColumns(10);
+		txtRecebeValorFixo.setBounds(707, 76, 261, 20);
+		contentPane.add(txtRecebeValorFixo);
 	}
-
 }

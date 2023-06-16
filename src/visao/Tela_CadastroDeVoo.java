@@ -18,12 +18,11 @@ public class Tela_CadastroDeVoo extends JFrame {
 	private JTextField txtDestino;
 	private JTextField txtHorario;
 	private JTextField txtData;
-	private JTextField txtEstimativa;
 
 	
 	public Tela_CadastroDeVoo() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 745, 474);
+		setBounds(100, 100, 1176, 663);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -35,47 +34,38 @@ public class Tela_CadastroDeVoo extends JFrame {
 		contentPane.add(lblCadastrarVoo);
 		
 		JLabel lblDestino = new JLabel("Destino");
-		lblDestino.setBounds(10, 114, 206, 14);
+		lblDestino.setBounds(22, 114, 206, 14);
 		contentPane.add(lblDestino);
 		
 		JLabel lblHorario = new JLabel("Horario:");
-		lblHorario.setBounds(10, 162, 206, 14);
+		lblHorario.setBounds(22, 162, 206, 14);
 		contentPane.add(lblHorario);
 		
 		JLabel lblData = new JLabel("Data:");
-		lblData.setBounds(10, 218, 206, 14);
+		lblData.setBounds(22, 207, 206, 14);
 		contentPane.add(lblData);
 		
-		JLabel lblEstimativa = new JLabel("Estimativa: ");
-		lblEstimativa.setBounds(10, 252, 206, 14);
-		contentPane.add(lblEstimativa);
-		
 		txtDestino = new JTextField();
-		txtDestino.setBounds(163, 111, 86, 20);
+		txtDestino.setBounds(163, 111, 254, 20);
 		contentPane.add(txtDestino);
 		txtDestino.setColumns(10);
 		
 		txtHorario = new JTextField();
 		txtHorario.setColumns(10);
-		txtHorario.setBounds(163, 159, 86, 20);
+		txtHorario.setBounds(163, 159, 254, 20);
 		contentPane.add(txtHorario);
 		
 		txtData = new JTextField();
 		txtData.setColumns(10);
-		txtData.setBounds(163, 204, 86, 20);
+		txtData.setBounds(163, 204, 254, 20);
 		contentPane.add(txtData);
 		
-		txtEstimativa = new JTextField();
-		txtEstimativa.setColumns(10);
-		txtEstimativa.setBounds(163, 249, 86, 20);
-		contentPane.add(txtEstimativa);
-		
 		JLabel lblAvio = new JLabel("Avião:");
-		lblAvio.setBounds(421, 11, 206, 14);
+		lblAvio.setBounds(421, 11, 129, 14);
 		contentPane.add(lblAvio);
 		
 		JComboBox cmbAviao = new JComboBox();
-		cmbAviao.setBounds(632, 7, 30, 22);
+		cmbAviao.setBounds(565, 7, 30, 22);
 		contentPane.add(cmbAviao);
 		
 		JButton btnVoltar = new JButton("Voltar");
@@ -99,16 +89,7 @@ public class Tela_CadastroDeVoo extends JFrame {
 				menu.setVisible(true);
 			}
 		});
-		btnSalvar.setBounds(100, 377, 89, 23);
+		btnSalvar.setBounds(139, 366, 89, 23);
 		contentPane.add(btnSalvar);
-		
-		JButton btnSair = new JButton("Sair");
-		btnSair.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				dispose();
-			}
-		});
-		btnSair.setBounds(160, 11, 89, 23);
-		contentPane.add(btnSair);
 	}
 }

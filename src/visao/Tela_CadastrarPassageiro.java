@@ -22,7 +22,6 @@ public class Tela_CadastrarPassageiro extends JFrame {
 	private JTextField textEmail;
 	private JTextField textCpf;
 	private JTextField textTelefone;
-	private JButton btnSair;
 	private JButton btnVoltar;
 	private JLabel lblQuatBag;
 	private JTextField txtQuantBag;
@@ -31,33 +30,42 @@ public class Tela_CadastrarPassageiro extends JFrame {
 	public Tela_CadastrarPassageiro() {
 		setTitle("Cadastro de Passageiros");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 830, 383);
+		setBounds(100, 100, 1177, 673);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		
-		JLabel lblNome = new JLabel("Nome:");
+		JLabel lblNome = new JLabel("Nome completo:");
+		lblNome.setBounds(260, 289, 119, 14);
 		
 		textNome = new JTextField();
+		textNome.setBounds(383, 286, 665, 20);
 		textNome.setColumns(10);
 		
 		JLabel lblEmail = new JLabel("Email:");
+		lblEmail.setBounds(281, 365, 81, 14);
 		
 		textEmail = new JTextField();
+		textEmail.setBounds(383, 362, 763, 20);
 		textEmail.setColumns(10);
 		
 		JLabel lblCpf = new JLabel("Cpf:");
+		lblCpf.setBounds(281, 414, 43, 14);
 		
 		textCpf = new JTextField();
+		textCpf.setBounds(383, 411, 763, 20);
 		textCpf.setColumns(10);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
+		lblTelefone.setBounds(281, 327, 135, 14);
 		
 		textTelefone = new JTextField();
+		textTelefone.setBounds(383, 324, 763, 20);
 		textTelefone.setColumns(10);
 		
 		JButton btnSalvar = new JButton("Salvar");
+		btnSalvar.setBounds(383, 576, 81, 23);
 		btnSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -67,14 +75,8 @@ public class Tela_CadastrarPassageiro extends JFrame {
 			}
 		});
 		
-		btnSair = new JButton("Sair");
-		btnSair.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				dispose();
-			}
-		});
-		
 		btnVoltar = new JButton("Voltar");
+		btnVoltar.setBounds(523, 576, 61, 23);
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -85,84 +87,33 @@ public class Tela_CadastrarPassageiro extends JFrame {
 		});
 		
 		lblQuatBag = new JLabel("Quantidade de bagagem: ");
+		lblQuatBag.setBounds(219, 474, 160, 14);
 		
 		txtQuantBag = new JTextField();
+		txtQuantBag.setBounds(383, 471, 86, 20);
 		txtQuantBag.setColumns(10);
 		
 		JLabel lblPesoBag = new JLabel("Peso bagagem");
+		lblPesoBag.setBounds(260, 529, 102, 14);
 		
 		txtPesoBagagem = new JTextField();
+		txtPesoBagagem.setBounds(383, 526, 86, 20);
 		txtPesoBagagem.setColumns(10);
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.TRAILING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-						.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
-							.addComponent(btnVoltar)
-							.addPreferredGap(ComponentPlacement.RELATED, 674, Short.MAX_VALUE)
-							.addComponent(btnSair, GroupLayout.PREFERRED_SIZE, 64, GroupLayout.PREFERRED_SIZE))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(214)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addComponent(lblTelefone, GroupLayout.PREFERRED_SIZE, 135, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblNome, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblCpf, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblEmail, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblQuatBag, GroupLayout.PREFERRED_SIZE, 160, GroupLayout.PREFERRED_SIZE))
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-									.addComponent(textEmail, 421, 421, Short.MAX_VALUE)
-									.addComponent(textTelefone, 421, 421, Short.MAX_VALUE)
-									.addComponent(textNome, GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
-									.addComponent(textCpf, GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE))
-								.addGroup(gl_contentPane.createSequentialGroup()
-									.addComponent(txtQuantBag, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-									.addGap(27)
-									.addComponent(lblPesoBag, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(txtPesoBagagem, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(btnSalvar, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)
-									.addPreferredGap(ComponentPlacement.RELATED)))))
-					.addGap(91))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnVoltar)
-						.addComponent(btnSair))
-					.addPreferredGap(ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(textNome, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblNome))
-							.addGap(49)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-								.addComponent(textEmail, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblEmail))
-							.addGap(18)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(textCpf, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblCpf))
-							.addGap(21)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(txtQuantBag, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblQuatBag)
-								.addComponent(txtPesoBagagem, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblPesoBag)
-								.addComponent(btnSalvar)))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(31)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(textTelefone, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblTelefone))))
-					.addGap(21))
-		);
-		contentPane.setLayout(gl_contentPane);
+		contentPane.setLayout(null);
+		contentPane.add(btnVoltar);
+		contentPane.add(lblTelefone);
+		contentPane.add(lblNome);
+		contentPane.add(lblCpf);
+		contentPane.add(lblEmail);
+		contentPane.add(lblQuatBag);
+		contentPane.add(textEmail);
+		contentPane.add(textTelefone);
+		contentPane.add(textNome);
+		contentPane.add(textCpf);
+		contentPane.add(txtQuantBag);
+		contentPane.add(lblPesoBag);
+		contentPane.add(txtPesoBagagem);
+		contentPane.add(btnSalvar);
 	}
 }
 
