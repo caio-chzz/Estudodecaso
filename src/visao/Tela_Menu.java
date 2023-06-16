@@ -47,6 +47,14 @@ public class Tela_Menu extends JFrame {
 		contentPane.add(btnComprarPassagens);
 		
 		JButton btnAdicionarVoo = new JButton("Adicionar voô");
+		btnAdicionarVoo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				Tela_CadastroDeVoo cadastroDeVoo = new Tela_CadastroDeVoo();
+				cadastroDeVoo.setExtendedState(JFrame.MAXIMIZED_BOTH); // Maximize a tela
+				cadastroDeVoo.setVisible(true);
+			}
+		});
 		btnAdicionarVoo.setBounds(10, 78, 154, 23);
 		contentPane.add(btnAdicionarVoo);
 		
@@ -65,5 +73,9 @@ public class Tela_Menu extends JFrame {
 		});
 		btnNewButton.setBounds(10, 123, 154, 23);
 		contentPane.add(btnNewButton);
+		
+		JLabel lblNewLabel = new JLabel("JTable com voos cadastrados");
+		lblNewLabel.setBounds(189, 78, 196, 138);
+		contentPane.add(lblNewLabel);
 	}
 }
