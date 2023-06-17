@@ -20,6 +20,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JPasswordField;
+import javax.swing.ImageIcon;
 
 public class Tela_Login extends JFrame {
 
@@ -50,7 +51,7 @@ public class Tela_Login extends JFrame {
 	public Tela_Login() {
 		setBackground(new Color(255, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1198, 740);
+		setBounds(100, 100, 1225, 740);
 		BufferedImage bg = null;
 		
 		
@@ -117,6 +118,11 @@ public class Tela_Login extends JFrame {
 		passwordField.setBackground(new Color(49, 83, 181));
 		passwordField.setBounds(167, 158, 234, 19);
 		panel.add(passwordField);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBounds(798, 279, 591, 194);
+		contentPane.add(lblNewLabel);
+		lblNewLabel.setIcon(new ImageIcon(Tela_Login.class.getResource("/imagens/image-removebg-preview (24).png")));
 		btnCadastrodUsuario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
