@@ -9,31 +9,69 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JTable;
+import javax.swing.JTextArea;
+import javax.swing.JPasswordField;
 
 public class Tela_Menu extends JFrame {
 
 	private JPanel contentPane;
+	private JTable table;
 
 	
 	public Tela_Menu() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1104, 592);
+		setBounds(100, 100, 1226, 730);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(56, 124, 154));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnSair = new JButton("Sair");
+		JLabel lblVoos = new JLabel("Voôs disponíveis");
+		lblVoos.setForeground(new Color(0, 0, 0));
+		lblVoos.setFont(new Font("Tahoma", Font.BOLD, 33));
+		lblVoos.setBounds(566, 104, 297, 62);
+		contentPane.add(lblVoos);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(0, 0, 160));
+		panel.setBounds(103, 0, 291, 826);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JButton btnAdicionarVoo = new JButton("Adicionar voô");
+		btnAdicionarVoo.setForeground(new Color(0, 0, 0));
+		btnAdicionarVoo.setFont(new Font("Tahoma", Font.BOLD, 17));
+		btnAdicionarVoo.setBackground(new Color(128, 128, 128));
+		btnAdicionarVoo.setBounds(78, 403, 203, 35);
+		panel.add(btnAdicionarVoo);
+		
+		JButton btnComprarPassagens = new JButton("Comprar passagens");
+		btnComprarPassagens.setFont(new Font("Tahoma", Font.BOLD, 17));
+		btnComprarPassagens.setForeground(new Color(0, 0, 0));
+		btnComprarPassagens.setBackground(new Color(0, 255, 128));
+		btnComprarPassagens.setBounds(78, 272, 203, 35);
+		panel.add(btnComprarPassagens);
+		
+		JButton btnSair = new JButton("Sair do sistema");
+		btnSair.setForeground(new Color(0, 0, 0));
+		btnSair.setFont(new Font("Tahoma", Font.BOLD, 17));
+		btnSair.setBackground(new Color(255, 128, 128));
+		btnSair.setBounds(78, 136, 203, 35);
+		panel.add(btnSair);
+		
+		table = new JTable();
+		table.setBounds(570, 232, 739, 492);
+		contentPane.add(table);
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 			}
 		});
-		btnSair.setBounds(10, 11, 89, 23);
-		contentPane.add(btnSair);
-		
-		JButton btnComprarPassagens = new JButton("Comprar passagens");
 		btnComprarPassagens.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -43,10 +81,6 @@ public class Tela_Menu extends JFrame {
 			
 			}
 		});
-		btnComprarPassagens.setBounds(10, 45, 154, 23);
-		contentPane.add(btnComprarPassagens);
-		
-		JButton btnAdicionarVoo = new JButton("Adicionar voô");
 		btnAdicionarVoo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -55,15 +89,5 @@ public class Tela_Menu extends JFrame {
 				cadastroDeVoo.setVisible(true);
 			}
 		});
-		btnAdicionarVoo.setBounds(10, 78, 154, 23);
-		contentPane.add(btnAdicionarVoo);
-		
-		JLabel lblVoos = new JLabel("Voôs disponíveis");
-		lblVoos.setBounds(259, 38, 111, 14);
-		contentPane.add(lblVoos);
-		
-		JLabel lblNewLabel = new JLabel("JTable com voos cadastrados");
-		lblNewLabel.setBounds(322, 122, 196, 138);
-		contentPane.add(lblNewLabel);
 	}
 }

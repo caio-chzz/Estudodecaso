@@ -19,12 +19,13 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JPasswordField;
 
 public class Tela_Login extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textEmail;
 	private JTextField textSenha;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -58,7 +59,7 @@ public class Tela_Login extends JFrame {
 			
 
 		contentPane = new VBackGround(bg);
-		contentPane.setBackground(new Color(82, 159, 192));
+		contentPane.setBackground(new Color(56, 124, 154));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -96,12 +97,6 @@ public class Tela_Login extends JFrame {
 		btnCadastrodUsuario.setBounds(291, 241, 138, 59);
 		panel.add(btnCadastrodUsuario);
 		
-		textEmail = new JTextField();
-		textEmail.setBackground(new Color(49, 83, 181));
-		textEmail.setBounds(167, 158, 234, 19);
-		panel.add(textEmail);
-		textEmail.setColumns(10);
-		
 		textSenha = new JTextField();
 		textSenha.setBackground(new Color(49, 83, 181));
 		textSenha.setBounds(167, 105, 234, 19);
@@ -117,6 +112,11 @@ public class Tela_Login extends JFrame {
 		lblSenha.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblSenha.setBounds(56, 159, 68, 13);
 		panel.add(lblSenha);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBackground(new Color(49, 83, 181));
+		passwordField.setBounds(167, 158, 234, 19);
+		panel.add(passwordField);
 		btnCadastrodUsuario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
