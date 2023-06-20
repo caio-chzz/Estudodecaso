@@ -21,9 +21,9 @@ O sistema fará a manipulação de um gerenciamento de aeroporto para controle d
 ![Diagrama em branco (5)](https://github.com/caio-chzz/Flying-airlines/assets/111304209/67074da8-750d-4bc7-afc3-d4e5573b61c9)
 
 
-### documentação
+### Documentação
 
-https://docs.google.com/document/d/1NIBJTZUWSYdOJdejlKkVt5y2_Trsm-snSZuJPwlIJGQ/edit?usp=sharing
+[Disponível aqui](https://docs.google.com/document/d/1NIBJTZUWSYdOJdejlKkVt5y2_Trsm-snSZuJPwlIJGQ/edit?usp=sharing).
 
 ### Diagrama classes
 ![Captura de tela 2023-06-19 200434](https://github.com/caio-chzz/Estudodecaso/blob/main/aeroportoPDS.umlcd.png)
