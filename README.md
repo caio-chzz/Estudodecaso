@@ -18,7 +18,7 @@ O sistema fará a manipulação de um gerenciamento de aeroporto para controle d
 ![telas (1)](https://github.com/caio-chzz/Estudodecaso/blob/main/Diagrama.png)
 
 ## Diagrama de casos de uso
-![Diagrama em branco (5)](https://github.com/caio-chzz/Flying-airlines/assets/111304209/67074da8-750d-4bc7-afc3-d4e5573b61c9)
+![Diagrama em branco (5)](https://github.com/caio-chzz/Estudodecaso/blob/main/Diagrama%20de%20casos%20de%20uso.png)
 
 ### Diagrama classes
 ![Captura de tela 2023-06-19 200434](https://github.com/caio-chzz/Estudodecaso/blob/main/aeroportoPDS.umlcd.png)
