@@ -1,6 +1,4 @@
 # Flying-airlines
-Repositorio antigo(para ver comitis )
-https://github.com/caio-chzz/Estudodecaso.git 
 
 ```C#
 using System;
